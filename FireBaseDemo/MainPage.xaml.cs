@@ -93,7 +93,8 @@ namespace FireBaseDemo
         {
             firebaseStorage = new
             FirebaseStorage("fir-demo-2cc0a.appspot.com");
-            var imageurl=   firebaseStorage
+            //gs://fir-demo-2cc0a.appspot.com
+            var imageurl =   firebaseStorage
                     .Child("FileUploading")
                     .Child(fileName)
                     .PutAsync(fileStream);
@@ -106,6 +107,16 @@ namespace FireBaseDemo
         {
             UploadFile(Stream, FileName);
 
+        }
+
+        private void Downloaded(object sender, EventArgs e)
+        {
+            firebaseStorage.Child("XamarinMonkeys").Child(FileName).GetDownloadUrlAsync();
+        }
+
+        private void Deleted(object sender, EventArgs e)
+        {
+            firebaseStorage.Child("XamarinMonkeys").Child(FileName).DeleteAsync();
         }
     }
 }

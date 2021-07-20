@@ -8,7 +8,9 @@
         <Image x:Name="selectedImage"/>
         <Label x:Name="filename"/>
 
-        <Button Text="Upload" Clicked="UploadAFile"></Button>
+        <Button Text="Upload" Clicked="UploadAFile"/>
+        <Button Text="Download" Clicked="Downloaded"/>
+        <Button Text="Delete" Clicked="Deleted"/>
     </StackLayout>
 
 </ContentPage>
