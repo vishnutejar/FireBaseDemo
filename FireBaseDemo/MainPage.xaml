@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireBaseDemo.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <Button Text="Select" Clicked="SelectedImageFromFile"/>
+        <Image x:Name="selectedImage"/>
+        <Label x:Name="filename"/>
+
+        <Button Text="Upload" Clicked="UploadAFile"></Button>
+    </StackLayout>
+
+</ContentPage>
